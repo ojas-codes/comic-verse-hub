@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Comics - ComicVerse Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>🦸 ComicVerse Hub</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html" class="active">Browse Comics</a></li>
+                    <li><a href="cart.html">Cart <span class="cart-count" id="cartCount">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container browse-page">
+        <div class="page-header">
+            <h1>Browse Comics</h1>
+            <p class="results-count" id="resultsCount">Showing all comics</p>
+        </div>
+
+        <div class="browse-controls">
+            <div class="filters-section">
+                <div class="filter-group">
+                    <label for="publisherFilter">Publisher:</label>
+                    <select id="publisherFilter" class="filter-select">
+                        <option value="">All Publishers</option>
+                        <option value="Marvel Comics">Marvel Comics</option>
+                        <option value="DC Comics">DC Comics</option>
+                        <option value="Image Comics">Image Comics</option>
+                        <option value="Dark Horse Comics">Dark Horse Comics</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="genreFilter">Genre:</label>
+                    <select id="genreFilter" class="filter-select">
+                        <option value="">All Genres</option>
+                        <option value="Superhero">Superhero</option>
+                        <option value="Sci-Fi">Sci-Fi</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Action">Action</option>
+                        <option value="Adventure">Adventure</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="sortBy">Sort By:</label>
+                    <select id="sortBy" class="filter-select">
+                        <option value="title-asc">Title (A-Z)</option>
+                        <option value="title-desc">Title (Z-A)</option>
+                        <option value="price-asc">Price (Low to High)</option>
+                        <option value="price-desc">Price (High to Low)</option>
+                        <option value="date-desc">Release Date (Newest)</option>
+                        <option value="date-asc">Release Date (Oldest)</option>
+                    </select>
+                </div>
+
+                <button class="btn-reset" id="resetFilters">Reset Filters</button>
+            </div>
+        </div>
+
+        <div class="comics-grid" id="comicsGrid"></div>
+
+        <div class="no-results" id="noResults" style="display: none;">
+            <h2>No Comics Found</h2>
+            <p>Try adjusting your filters to see more results.</p>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About ComicVerse Hub</h3>
+                    <p>Your ultimate destination for the best comics from Marvel, DC, Image, and Dark Horse. Discover epic stories and legendary heroes!</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="browse.html">Browse Comics</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Publishers</h3>
+                    <ul>
+                        <li><a href="browse.html?publisher=Marvel Comics">Marvel Comics</a></li>
+                        <li><a href="browse.html?publisher=DC Comics">DC Comics</a></li>
+                        <li><a href="browse.html?publisher=Image Comics">Image Comics</a></li>
+                        <li><a href="browse.html?publisher=Dark Horse Comics">Dark Horse Comics</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ComicVerse Hub. All rights reserved. | A Static Comic Store Experience</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="comics.js"></script>
+    <script src="browse.js"></script>
+</body>
+</html>

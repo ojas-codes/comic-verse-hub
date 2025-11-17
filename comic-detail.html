@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Details - ComicVerse Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>🦸 ComicVerse Hub</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse Comics</a></li>
+                    <li><a href="cart.html">Cart <span class="cart-count" id="cartCount">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container detail-page">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> / <a href="browse.html">Browse</a> / <span id="breadcrumbTitle">Comic Details</span>
+        </div>
+
+        <div id="comicDetail" class="comic-detail-container">
+            <div class="loading">Loading comic details...</div>
+        </div>
+
+        <div id="notFound" class="not-found" style="display: none;">
+            <h2>Comic Not Found</h2>
+            <p>The comic you're looking for doesn't exist.</p>
+            <a href="browse.html" class="btn btn-primary">Browse All Comics</a>
+        </div>
+
+        <section class="related-comics" id="relatedSection" style="display: none;">
+            <h2 class="section-title">You Might Also Like</h2>
+            <div class="comics-grid" id="relatedComics"></div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About ComicVerse Hub</h3>
+                    <p>Your ultimate destination for the best comics from Marvel, DC, Image, and Dark Horse. Discover epic stories and legendary heroes!</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="browse.html">Browse Comics</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Publishers</h3>
+                    <ul>
+                        <li><a href="browse.html?publisher=Marvel Comics">Marvel Comics</a></li>
+                        <li><a href="browse.html?publisher=DC Comics">DC Comics</a></li>
+                        <li><a href="browse.html?publisher=Image Comics">Image Comics</a></li>
+                        <li><a href="browse.html?publisher=Dark Horse Comics">Dark Horse Comics</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ComicVerse Hub. All rights reserved. | A Static Comic Store Experience</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="comics.js"></script>
+    <script src="comic-detail.js"></script>
+</body>
+</html>
